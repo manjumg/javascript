@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        .hidden {
+            display: none;
+        }
+        #email{
+            margin-top:10px ;
+        }
+        #password{
+            margin-top:10px;
+        }
+        input{
+            border-radius: 5px;
+            
+        }
+    </style>
+   
+</head>
+<body>
+    <form id="signupForm">
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required placeholder="Example@email.com">
+            <span id="emailError" class="error hidden">Make sure email is more than 3 characters and has @ and a . </span>
+            <span id="emailSuccess" class="success hidden">All good to go!</span>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Your Password" required>
+            <span id="passwordError" class="error hidden">Make sure password is more than 8 characters.</span>
+            <span id="passwordSuccess" class="success hidden">All good to go!</span>
+        </div>
+        <br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <script src="./index.js"></script>
+        
+</body>
+</html>
